@@ -21,7 +21,7 @@ public class HashSetExample {
     }
 }
 ```  
-**output:**
+###### **output:**
 ```
 HashSet: [Java, C++, Python]
 ```
