@@ -4,7 +4,7 @@
 HashSet<String> set = new HashSet<>();
 ```
 
-##### **1. Adding Elements (add):**
+##### **1. Adding Elements (add()):**
 ```java
 import java.util.HashSet;
 
@@ -27,7 +27,7 @@ HashSet: [Java, C++, Python]
 ```
 
 
-##### **2. Removing Elements (remove):**
+##### **2. Removing Elements (remove()):**
 ```java
 import java.util.HashSet;
 
@@ -51,7 +51,7 @@ HashSet after removal: [Java, C++]
 ```
 
 
-##### **3. Checking if an Element is Present (contains):**
+##### **3. Checking if an Element is Present (contains()):**
 ```java
 import java.util.HashSet;
 
@@ -112,7 +112,7 @@ Python
 ```
 
 
-##### **5. Getting the Size (size):**
+##### **5. Getting the Size (size()):**
 ```java
 import java.util.HashSet;
 
@@ -131,4 +131,114 @@ public class HashSetExample {
 ###### **output:**
 ```
 Size of HashSet: 3
+```
+
+
+
+##### **6. Clearing the HashSet (clear()):**
+```java
+import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+
+        set.add("Java");
+        set.add("Python");
+        set.add("C++");
+
+        System.out.println("HashSet before clearing: " + set);
+
+        // Clear the HashSet
+        set.clear();
+
+        System.out.println("HashSet after clearing: " + set);
+    }
+}
+```
+###### **output:**
+```
+HashSet before clearing: [Java, C++, Python]
+HashSet after clearing: []
+```
+
+
+##### **7. Checking if HashSet is Empty (isEmpty()):**
+```java
+import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+
+        System.out.println("Is HashSet empty? " + set.isEmpty());
+
+        set.add("Java");
+        set.add("Python");
+        set.add("C++");
+
+        System.out.println("Is HashSet empty? " + set.isEmpty());
+    }
+}
+```
+###### **output:**
+```
+Is HashSet empty? true
+Is HashSet empty? false
+```
+
+
+##### **8. Creating a Spliterator (spliterator()):**
+```java
+import java.util.HashSet;
+import java.util.Spliterator;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
+
+        set.add("Java");
+        set.add("Python");
+        set.add("C++");
+
+        // Get a Spliterator
+        Spliterator<String> spliterator = set.spliterator();
+
+        // Perform some operation using Spliterator
+        spliterator.forEachRemaining(System.out::println);
+    }
+}
+
+```
+###### **output:**
+```
+Java
+C++
+Python
+```
+
+
+##### **9. Copy or Clone HashSet:**
+```java
+public class HashSetExample {
+    public static void main(String[] args) {
+        HashSet<String> sourceSet = new HashSet<>();
+        sourceSet.add("Java");
+        sourceSet.add("Python");
+        sourceSet.add("C++");
+
+        // Create the destination HashSet
+        HashSet<String> destinationSet = new HashSet<>(sourceSet); // first method
+
+        // Copy elements from sourceSet to destinationSet using addAll()
+        destinationSet.addAll(sourceSet);   // second method
+ 
+        // Display the contents of the destination HashSet
+        System.out.println("Destination HashSet: " + destinationSet);
+    }
+}
+```
+###### **output:**
+```
+Destination HashSet: [Java, C++, Python]
 ```
