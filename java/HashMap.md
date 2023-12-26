@@ -6,88 +6,361 @@ HashMap<String, Integer> map = new HashMap<>();
 
 ##### **1. put(K key, V value):**
 ```java
-// Associates the specified value with the specified key in the map.
-map.put("One", 1);
-map.put("Two", 2);
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        System.out.println("HashMap: " + hashMap);
+    }
+}
 ```  
+###### **output:**
+```
+HashMap: {Java=1, C++=3, Python=2}
+```
 
 ##### **2. get(Object key):**
 ```java
-// Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
-Integer value = map.get("One");
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Getting value by key
+        int javaValue = hashMap.get("C++");
+        System.out.println("Value for key 'C++': " + javaValue);
+    }
+}
 ```
+###### **output:**
+```
+Value for key 'C++': 3
+```
+
 
 ##### **3. containsKey(Object key):**
 ```java
-// Returns true if this map contains a mapping for the specified key.
-boolean containsKey = map.containsKey("Two");
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Checking if a key exists
+        boolean hasJavaKey = hashMap.containsKey("Java");
+        System.out.println("Contains key 'Java': " + hasJavaKey);
+    }
+}
 ```
+###### **output:**
+```
+Contains key 'Java': true
+```
+
 
 ##### **4. containsValue(Object value):**
 ```java 
-// Returns true if this map maps one or more keys to the specified value.
-boolean containsValue = map.containsValue(2);
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Checking if a value exists
+        boolean containsValue = hashMap.containsValue(2);
+        System.out.println("Contains value 2: " + containsValue);
+    }
+}
 ```
+###### **output:**
+```
+Contains value 2: true
+```
+
 
 ##### **5. getOrDefault(Object key, V defaultValue):**
 ```java
-// The getOrDefault() method returns the value to which the specified key is mapped, or a default value if the key is not present in the map.
-int value = map.getOrDefault("Four", 0);
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Getting value by key, with a default value
+        int value = hashMap.getOrDefault("JavaScript", 0);
+        System.out.println("Value for key 'JavaScript': " + value);
+    }
+}
 ```
+###### **output:**
+```
+Value for key 'JavaScript': 0
+```
+
 
 ##### **6. remove(Object key):**
 ```java 
-// Removes the mapping for the specified key from this map if present.
-map.remove("One");
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Removing a key-value pair
+        hashMap.remove("Python");
+
+        System.out.println("HashMap after removal: " + hashMap);
+    }
+}
 ```
+###### **output:**
+```
+HashMap after removal: {Java=1, C++=3}
+```
+
 
 ##### **7. size():**
 ```java 
-// Returns the number of key-value mappings in this map.
-int size = map.size();
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Getting the size of the HashMap
+        int size = hashMap.size();
+        System.out.println("Size of HashMap: " + size);
+    }
+}
 ```
+###### **output:**
+```
+Size of HashMap: 3
+```
+
 
 ##### **8. isEmpty():**
 ```java 
-// Returns true if this map contains no key-value mappings.
-boolean isEmpty = map.isEmpty();
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> emptyHashMap = new HashMap<>();
+
+        // Checking if the HashMap is empty
+        boolean isEmpty = emptyHashMap.isEmpty();
+        System.out.println("Is HashMap empty? " + isEmpty);
+    }
+}
 ```
+###### **output:**
+```
+Is HashMap empty? true
+```
+
 
 ##### **9. keySet():**
 ```java
-// Returns a Set view of the keys contained in this map.
-Set<String> keys = map.keySet();
+import java.util.HashMap;
+import java.util.Set;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Getting the key set
+        Set<String> keySet = hashMap.keySet();
+        System.out.println("Key Set: " + keySet);
+    }
+}
 ```
+###### **output:**
+```
+Key Set: [Java, C++, Python]
+```
+
 
 ##### **10. values():**
 ```java 
-// Returns a Collection view of the values contained in this map.
-Collection<Integer> values = map.values();
+import java.util.Collection;
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Getting the values collection
+        Collection<Integer> values = hashMap.values();
+        System.out.println("Values Collection: " + values);
+    }
+}
 ```
+###### **output:**
+```
+Values Collection: [1, 3, 2]
+```
+
 
 ##### **11. entrySet():**
 ```java 
-// Returns a Set view of the mappings contained in this map.
-Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+       HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Iterating over key-value pairs
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+}
 ```
+###### **output:**
+```
+Key: Java, Value: 1
+Key: C++, Value: 3
+Key: Python, Value: 2
+```
+
 
 ##### **12. clear():**
 ```java 
-// The clear() method removes all of the mappings from the map. After this call, the map will be empty.
-map.clear();
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        System.out.println("HashMap before clearing: " + hashMap);
+
+        // Clearing the HashMap
+        hashMap.clear();
+
+        System.out.println("HashMap after clearing: " + hashMap);
+    }
+}
 ```
+###### **output:**
+```
+HashMap before clearing: {Java=1, C++=3, Python=2}
+HashMap after clearing: {}
+```
+
 
 ##### **13. forEach():**
 ```java 
-// The forEach() method performs the given action for each entry in the map.
-map.forEach((key, value) -> System.out.println(key + " : " + value));
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        // Using forEach to print key-value pairs
+        hashMap.forEach((key, value) -> System.out.println("Key: " + key + ", Value: " + value));
+    }
+}
 ```
+###### **output:**
+```
+Key: Java, Value: 1
+Key: C++, Value: 3
+Key: Python, Value: 2
+```
+
 
 ##### **14. replaceAll():**
 ```java 
-// The replaceAll() method replaces each entry's value with the result of applying the given function to that entry.
-map.replaceAll((key, value) -> value * 2);
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+        // Adding key-value pairs
+        hashMap.put("Java", 1);
+        hashMap.put("Python", 2);
+        hashMap.put("C++", 3);
+
+        System.out.println("HashMap before replaceAll: " + hashMap);
+
+        // Incrementing each value by 10 using replaceAll
+        hashMap.replaceAll((key, value) -> value + 10);
+
+        System.out.println("HashMap after replaceAll: " + hashMap);
+    }
+}
 ```
+###### **output:**
+```
+HashMap before replaceAll: {Java=1, C++=3, Python=2}
+HashMap after replaceAll: {Java=11, C++=13, Python=12}
+```
+
 
 ##### **15. clone():**
 ```java 

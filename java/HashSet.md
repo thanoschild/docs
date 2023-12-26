@@ -134,7 +134,6 @@ Size of HashSet: 3
 ```
 
 
-
 ##### **6. Clearing the HashSet (clear()):**
 ```java
 import java.util.HashSet;
@@ -208,7 +207,6 @@ public class HashSetExample {
         spliterator.forEachRemaining(System.out::println);
     }
 }
-
 ```
 ###### **output:**
 ```
